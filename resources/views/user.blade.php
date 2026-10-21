@@ -1,3 +1,4 @@
+@extends('layouts.app')
 <div>
     <!-- He who is contented is rich. - Laozi -->
     <h1>Hello Users</h1>

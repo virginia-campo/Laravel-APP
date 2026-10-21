@@ -1,0 +1,169 @@
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", sans-serif;
+    background-color: #f4f6f9;
+    color: #263238;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+    background: #172554;
+    color: #ffffff;
+    padding: 28px 0;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #60a5fa;
+}
+
+.tagline {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+/* Navigation */
+.site-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgb(15 23 42 / 4%);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 16px 20px;
+    color: #475569;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: #2563eb;
+    background: #eff6ff;
+    outline: none;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.main-content h1 {
+    margin-bottom: 16px;
+    color: #172554;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.main-content h2 {
+    margin: 28px 0 12px;
+    color: #1e3a8a;
+}
+
+.main-content p {
+    margin-bottom: 16px;
+    color: #475569;
+}
+
+.main-content a {
+    color: #2563eb;
+}
+
+/* Optional reusable card */
+.card {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgb(15 23 42 / 5%);
+}
+
+/* Footer */
+.site-footer {
+    padding: 24px 0;
+    background: #172554;
+    color: #cbd5e1;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .site-header .container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-links a {
+        flex: 1;
+        padding: 14px 8px;
+        text-align: center;
+        font-size: 0.875rem;
+    }
+
+    .main-content {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
