@@ -22,4 +22,9 @@ class UserController extends Controller
         // return $request->input('name', "guest");
         return $request;
     }
+
+    function index () {
+        $users = ["user01" , "user02" , "user03" , "user04"];
+        return( view( 'user' , ['users' => $users] ));
+    }
 }

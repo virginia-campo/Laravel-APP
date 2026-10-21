@@ -9,3 +9,5 @@ use App\Http\Controllers\UserController;
 
 Route::view('/','add-user');
 Route::post('/add-user',[UserController::class,'addUser']);
+
+Route::get('/',[UserController::class, 'index']);
